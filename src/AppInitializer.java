@@ -24,7 +24,7 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/Lend.fxml"));
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/Login.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         Image img = new Image("/image/icons8-books-48.png");
