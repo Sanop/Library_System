@@ -221,8 +221,13 @@ public class LendController {
 
         Connection connection = DBConnection.getInstance().getConnection();
         try {
+<<<<<<< HEAD
             PreparedStatement preparedStatement = connection.prepareStatement("insert into lendDetails (borrower_ID,isbn,date_Of_Lend,date_Of_Return,status)" +
                     "values (?,?,?,?,?)");
+=======
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into lendDetails (borrower_ID,isbn,date_Of_Lend,date_Of_Return)" +
+                    "values (?,?,?,?)");
+>>>>>>> 41cc5a4fee3074071bf497c4d04a5997654d2be7
 
             PreparedStatement preparedStatement1 = connection.prepareStatement("update books set status = 'Issued' where isbn = ?");
 
@@ -241,7 +246,10 @@ public class LendController {
                 preparedStatement.setObject(2, isbn);
                 preparedStatement.setObject(3, lendDate);
                 preparedStatement.setObject(4, returnDate);
+<<<<<<< HEAD
                 preparedStatement.setObject(5,"Not Borrowed");
+=======
+>>>>>>> 41cc5a4fee3074071bf497c4d04a5997654d2be7
 
                 preparedStatement1.setObject(1,isbn);
 
